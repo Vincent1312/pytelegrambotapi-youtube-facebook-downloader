@@ -19,8 +19,8 @@ headers = {
 #download publish video facebook function
 def dl_facebook(link_fb,id_user):
 	global link_download
-	url_res = 'https://x2download.com/api/ajaxSearch/facebook'
-	data = {'q':f'{link_fb}','vt': 'facebook'}
+	url_res = 'https://x2download.com/api/ajaxSearch'
+	data = {'q':f'{link_fb}','vt': 'home'}
 	res = requests.post(url_res,headers=headers,data=data)
 	try:
 		jsondata = res.json()
@@ -72,12 +72,13 @@ def getlink_youtube(vid,title,token,timeExpires,id_user):
 	  'v_id': f'{vid}',
 	  'ftype': 'mp4',
 	  'fquality': f'{i}',
-	  'fname': f'{title}',
+# 	  'fname': f'{title}',
 	  'token': f'{token}',
-	  'timeExpire': f'{timeExpires}'
+	  'timeExpire': f'{timeExpires}',
+	'client': 'X2Download.app'
 		}
 		try:
-			response = requests.post('https://dhdha3.ohahao.xyz/api/json/convert', headers=headers, data=data)
+			response = requests.post('https://dd107.opoaidazzc.xyz/api/json/convert', headers=headers, data=data)
 			datajson = response.json()
 			result = datajson['result']
 			statusCode = datajson['statusCode']
