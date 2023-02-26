@@ -19,7 +19,7 @@ headers = {
 #download publish video facebook function
 def dl_facebook(link_fb,id_user):
 	global link_download
-	url_res = 'https://x2download.com/api/ajaxSearch'
+	url_res = 'https://x2download.app/api/ajaxSearch'
 	data = {'q':f'{link_fb}','vt': 'home'}
 	res = requests.post(url_res,headers=headers,data=data)
 	try:
